@@ -1,0 +1,70 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio folders
+.vs/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish
+*.publishsettings
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Paket
+.paket/
+paket-files/
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Azure
+*.azurePubxml
+*.publishproj
+
+# Localdb
+*.mdf
+*.ldf
+
+# Others
+*.dbmdl
+*.jfm
+
+# Backup & temp files
+*.bak
+*.tmp
+*.temp
+~$*
+
+# OneDrive temp stuff
+*.~lock.*
+~*.tmp
