@@ -2,15 +2,86 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container align-content-center">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-12 col-md-6 col-lg-4">
-                <h2>Tekst1</h2>
-                <p>Treść, Treść,Treść, Treść, Treść, Treść, Treść, Treść</p>
-                <button type="button" class="btn btn-primary">Przykład Treśći</button>
+<div class="container justify-content-center col-12 col-lg-6 mb-4">
+    <h1 class="display-6 text-center fs-2 ">Zobacz, spróbuj, zamów ponownie - niepowtarzalne doświadczenie kulinarne.</h1>
+   <img src="content/zdj-glowne.png" class="img-fluid rounded-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Sałatka Cezar">
+    <h1 class="display-6 text-center fs-2 ">Kilka dań z naszego menu, zerknij poniżej. 👇</h1>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+      
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card border-warning mb-3" style="width: 18rem;">
+                <img src="content/1.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Oryginalny kebab.</h5>
+                    <p class="card-text">Kraftowe mięso, świeże warzywa oraz autorskie sosy.</p>
+                    <a href="#" class="btn btn-warning">Zobacz Menu</a>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card border-warning" style="width: 18rem;">
+                <img src="content/2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pizza Klasyczna</h5>
+                    <p class="card-text">Cieńkie czy grube ciasto? Wybór jest twój, niepowtarzalny smak. Mixuj dowolnie.</p>
+                    <a href="#" class="btn btn-warning">Zobacz Menu</a>
+                </div>
+            </div>
+        </div>
+
+ 
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div class="card border-warning" style="width: 18rem;">
+                <img src="content/3.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Podwójna rozkosz - Burger</h5>
+                    <p class="card-text">Dwa razy więcej mięsa, autorskie sosy, bułka wypiekana na miejscu.</p>
+                    <a href="#" class="btn btn-warning">Zobacz Menu</a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<div class="container">
+    <h1 class="display-6 text-center fs-2 mb-5 ">Dlaczego my?</h1>
+    <div class="row ">
+        <div class="col-12 col-lg-6 mb-4 align-items-center">
+            <img src="content/kucharz.png" class="img-fluid" alt="Miska z sałatką">
+        </div>
+        <div class="col-12 col-lg-6 mb-4 text-center">
+            <p class="fs-3">Ponad 20 lat doświadczenia!</p>
+            <p class="lead">
+             Od ponad 20 lat tworzymy wyjątkowe doświadczenie kulinarne, łączac doskonałą obsługę z pasją do perfekcji.                     Każdy detal ma dla nas znaczenie, a satysfkacja Gości to nasz najwyższy priorytet. 
+                Profesjonalny zespół w kuchni i na sali zadba o to, by każda wizyta była niezapomniana. Obsługa jest zawsze                 na najwyższym poziomie, z indywidualnym podejściem do każdego Gościa. <br>
+                Eleganckie wnętrza zostały zaprojektowane z myślą o wygodzie — także dla pupili, którzy są u nas mile                       widziani i zwolnieni z opłat.
+                Oferujemy kompleksowy catering: od małych przyjęć, przez wesela, po imprezy masowe. <br>
+                Korzystamy wyłącznie ze świeżych, lokalnych składników najwyższej jakości.
 
+                Jesteśmy elastyczni i otwarci na specjalne życzenia Gości.
+
+                Na miejscu dostępny jest bezpłatny parking i ładowarka dla samochodów elektrycznych (EV). 
+                Porozumiewamy się w językach: 
+                <strong>polski, angielski, hiszpański, francuski, niemiecki, rosyjski, chiński uproszczony.</strong>
+        </div>
+    </div>
+
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 ">
+            <a class="btn btn-warning" asp-controller="Home" asp-action="Menu">Menu</a>
+
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 ">
+            <button type="button" class="btn btn-warning">Zamów</button>
+        </div>
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-44 ">
+            <button type="button" class="btn btn-warning">Kontakt</button>
+        </div>
+        
+    </div>
+</div>

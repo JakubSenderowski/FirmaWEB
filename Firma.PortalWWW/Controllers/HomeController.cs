@@ -1,6 +1,6 @@
-using System.Diagnostics;
 using Firma.PortalWWW.Models;
 using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace Firma.PortalWWW.Controllers
 {
@@ -18,10 +18,19 @@ namespace Firma.PortalWWW.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Menu()
         {
             return View();
         }
+        public IActionResult Zamow()
+        {
+            return View();
+        }
+        public IActionResult Kontakt()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
