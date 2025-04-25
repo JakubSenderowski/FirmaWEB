@@ -11,17 +11,24 @@
 <body>
     <ul class="nav justify-content-center">
         <li class="nav-item">
-            <a class="nav-link fs-5" " href="#">DashBoard 📊</a>
+            <a class="nav-link  fs-5" asp-controller="Home" asp-action="Index">DashBoard 📊</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link fs-5"  href="#">Pracownicy 🧑🏼‍🍳</a>
+            <a class="nav-link  fs-5" asp-controller="Home" asp-action="Pracownicy">Pracownicy 🧑🏼‍🍳</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link fs-5"  href="#">Edycja Menu 🥨</a>
+            <a class="nav-link  fs-5" asp-controller="Home" asp-action="EdytujMenu">Edycja Menu 🥨</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link fs-5" href="#">Zamówienia 📋</a>
+            <a class="nav-link  fs-5" asp-controller="Home" asp-action="Zamowienia">Zamówienia 📋</a>
         </li>
+        <li class="nav-item">
+            <a class="nav-link  fs-5" asp-controller="Strona" asp-action="Index">Index 🛸</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link  fs-5" asp-controller="Pracownik" asp-action="Index">Pracownik 🛸</a>
+        </li>
+
     </ul>
     <div class="container">
         <main role="main" class="pb-3">

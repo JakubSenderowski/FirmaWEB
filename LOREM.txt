@@ -1,0 +1,11 @@
+Oto teksty w wersjach 10, 23, 30, 40 i 50 słów:
+
+Lorem 10 słów: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.
+
+Lorem 23 słowa: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultricies orci in libero tincidunt, ac elementum ligula eleifend.
+
+Lorem 30 słów: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce auctor quam sit amet purus auctor, a convallis ligula fermentum. Donec hendrerit nisl eu nisl suscipit, eget vestibulum justo vestibulum.
+
+Lorem 40 słów: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non urna id elit pretium luctus. Curabitur gravida enim a risus feugiat, in bibendum nisl tincidunt. Integer viverra magna ac tortor fringilla, ut cursus erat fermentum.
+
+Lorem 50 słów: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sed turpis eget felis maximus feugiat. Cras non eros metus. Etiam interdum, magna ac sollicitudin blandit, velit purus tincidunt ipsum, id pharetra eros urna at neque. Sed gravida justo sit amet dui dictum, in feugiat ante consequat.

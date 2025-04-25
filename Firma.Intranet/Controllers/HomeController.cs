@@ -18,7 +18,19 @@ namespace Firma.Intranet.Controllers
             return View();
         }
 
-       
+        public IActionResult Pracownicy()
+        {
+            return View();
+        }
+
+        public IActionResult EdytujMenu()
+        {
+            return View();
+        }
+        public IActionResult Zamowienia()
+        {
+            return View();
+        }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
