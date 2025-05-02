@@ -7,7 +7,9 @@
 <h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-outline-primary">
+        <i class="bi bi-ui-checks"></i> Utwórz nową pozycję.
+    </a>
 </p>
 <table class="table">
     <thead>
@@ -31,9 +33,16 @@
                 @Html.DisplayFor(modelItem => item.Opis)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdKategorii">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdKategorii">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdKategorii">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.IdKategorii" class="text-decoration-none text-dark">
+                        
+                        <i class="bi bi-pencil-square"></i>Edit
+                    </a> |
+                    <a asp-action="Details" asp-route-id="@item.IdKategorii" class="text-decoration-none text-dark">
+                        <i class="bi bi-plus"></i>Details
+                    </a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdKategorii" class="text-decoration-none text-dark">
+                        <i class="bi bi-trash3-fill"></i>Delete
+                    </a>
             </td>
         </tr>
 }

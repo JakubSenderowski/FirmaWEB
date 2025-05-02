@@ -10,11 +10,11 @@ using Firma.Intranet.Models.Intranet;
 
 namespace Firma.Intranet.Controllers
 {
-    public class UrlopiesController : Controller
+    public class UrlopController : Controller
     {
         private readonly FirmaIntranetContext _context;
 
-        public UrlopiesController(FirmaIntranetContext context)
+        public UrlopController(FirmaIntranetContext context)
         {
             _context = context;
         }
