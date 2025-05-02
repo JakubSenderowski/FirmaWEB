@@ -46,6 +46,8 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="IdDania" />
         <input type="submit" value="Usuń" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index" class="btn btn-outline-danger ">
+            <i class="bi bi-arrow-left-circle-fill"></i> Powrót
+        </a>
     </form>
 </div>
