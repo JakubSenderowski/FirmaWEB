@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Firma.Data.Data;
+using Firma.Data.Data.Menu;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Firma.Intranet.Data;
-using Firma.Intranet.Models.Menu;
+
 
 namespace Firma.Intranet.Controllers
 {
     public class KategoriaController : Controller
     {
-        private readonly FirmaIntranetContext _context;
+        private readonly FirmaContext _context;
 
-        public KategoriaController(FirmaIntranetContext context)
+        public KategoriaController(FirmaContext context)
         {
             _context = context;
         }

@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Firma.Data.Data;
+using Firma.Data.Data.Intranet;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using Firma.Intranet.Data;
-using Firma.Intranet.Models.Intranet;
+
 
 namespace Firma.Intranet.Controllers
 {
     public class PracownikController : Controller
     {
-        private readonly FirmaIntranetContext _context;
+        private readonly FirmaContext _context;
 
-        public PracownikController(FirmaIntranetContext context)
+        public PracownikController(FirmaContext context)
         {
             _context = context;
         }
