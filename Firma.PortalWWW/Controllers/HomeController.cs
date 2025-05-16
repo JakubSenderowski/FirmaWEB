@@ -1,7 +1,9 @@
 using Firma.Data.Data;
+using Firma.Data.Data.Intranet;
 using Firma.Data.Data.Menu;
 using Firma.PortalWWW.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 
 namespace Firma.PortalWWW.Controllers
@@ -28,11 +30,26 @@ namespace Firma.PortalWWW.Controllers
         }
         public IActionResult Zamow()
         {
-            return View();
+            var zamowienia = _context.Zamowienie
+            .Include(z => z.Danie)
+            .Include(z => z.MetodaPlatnosci)
+            .OrderByDescending(z => z.IdZamowienia)
+            .Take(10)
+            .ToList();
+
+
+            return View(zamowienia);
+
+           
         }
         public IActionResult Kontakt()
         {
             return View();
+        }
+        public IActionResult Pracownicy()
+        {
+            var pracownicy = _context.Pracownik.ToList();
+            return View(pracownicy);
         }
 
 

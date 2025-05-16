@@ -16,7 +16,10 @@ html {
   position: relative;
   min-height: 100%;
 }
-
+.pracownik {
+    width: 64px;
+    height: 64px;
+}
 body {
   margin-bottom: 60px;
 }

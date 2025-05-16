@@ -1,0 +1,36 @@
+﻿@model List<Firma.Data.Data.Intranet.Pracownik>
+@{
+
+    ViewData["Title"] = "Pracownicy";
+
+}
+<div class="container">
+    <h1 class="display-6 text-center mt-3 mb-3">Zatrudnieni pracownicy</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Pracownik</th>
+                <th scope="col">Imie</th>
+                <th scope="col">Nazwisko</th>
+                <th scope="col">Stanowisko</th>
+                <th scope="col">Opcje</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pracownik in Model)
+            {
+                <tr>
+                    <th scope="row"><img src="~/content/@(pracownik.FotoURL).png" class="card-img-top pracownik " alt="..."></th>
+                <td>@pracownik.Imie</td>
+                <td>@pracownik.Nazwisko</td>
+                <td>@pracownik.Stanowisko</td>
+                <td>
+                    <button type="button" class="btn btn-success">Urlopuj</button>
+                    <button type="button" class="btn btn-warning">Edytuj</button>
+                    <button type="button" class="btn btn-danger">Usuń</button>
+                </td>
+            </tr>
+           }
+        </tbody>
+    </table>
+</div>
