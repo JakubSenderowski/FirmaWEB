@@ -44,7 +44,8 @@ namespace Firma.PortalWWW.Controllers
         }
         public IActionResult Kontakt()
         {
-            return View();
+            var kontakt = _context.WiadomoscKontaktowa.OrderByDescending(z => z.IdWiadomosciKontaktowej).Take(10).ToList();
+            return View(kontakt);
         }
         public IActionResult Pracownicy()
         {
