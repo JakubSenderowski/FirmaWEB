@@ -1,49 +1,30 @@
-﻿@{
+﻿@model List<Firma.Data.Data.Menu.Danie>
+@{
+
     ViewData["Title"] = "Home Page";
+
 }
 
 <div class="container justify-content-center col-12 col-lg-6 mb-4">
     <h1 class="display-6 text-center fs-2 ">Zobacz, spróbuj, zamów ponownie - niepowtarzalne doświadczenie kulinarne.</h1>
-   <img src="content/zdj-glowne.png" class="img-fluid rounded-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Sałatka Cezar">
+    <img src="content/zdj-glowne.png" class="img-fluid rounded-3 shadow-lg p-3 mb-5 bg-body-tertiary rounded" alt="Sałatka Cezar">
     <h1 class="display-6 text-center fs-2 ">Kilka dań z naszego menu, zerknij poniżej. 👇</h1>
 </div>
 <div class="container">
-    <div class="row justify-content-center">
-      
+    <div class="row justify-content-center">  
+        @foreach (var danie in Model)
+        {
         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-warning mb-3" style="width: 18rem;">
-                <img src="content/1.png" class="card-img-top" alt="...">
+                <div class="card border-warning mb-3" style="width: 18rem;">
+                <img src="~/content/@(danie.FotoURL).png" class="card-img-top" alt="@danie.Nazwa">
                 <div class="card-body">
-                    <h5 class="card-title">Oryginalny kebab.</h5>
-                    <p class="card-text">Kraftowe mięso, świeże warzywa oraz autorskie sosy.</p>
+                    <h5 class="card-title">@danie.Nazwa</h5>
+                    <p class="card-text">@danie.Opis</p>
                     <a href="#" class="btn btn-warning">Zobacz Menu</a>
                 </div>
             </div>
         </div>
-
-        
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-warning" style="width: 18rem;">
-                <img src="content/2.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Pizza Klasyczna</h5>
-                    <p class="card-text">Cieńkie czy grube ciasto? Wybór jest twój, niepowtarzalny smak. Mixuj dowolnie.</p>
-                    <a href="#" class="btn btn-warning">Zobacz Menu</a>
-                </div>
-            </div>
-        </div>
-
- 
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card border-warning" style="width: 18rem;">
-                <img src="content/3.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Podwójna rozkosz - Burger</h5>
-                    <p class="card-text">Dwa razy więcej mięsa, autorskie sosy, bułka wypiekana na miejscu.</p>
-                    <a href="#" class="btn btn-warning">Zobacz Menu</a>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </div>
 <div class="container">
@@ -70,18 +51,18 @@
     </div>
 
 </div>
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 ">
-            <a class="btn btn-warning" asp-controller="Home" asp-action="Menu">Menu</a>
+@* <div class="container"> *@
+@*     <div class="row justify-content-center"> *@
+@*         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 "> *@
+@*             <a class="btn btn-warning" asp-controller="Home" asp-action="Menu">Menu</a> *@
 
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 ">
-            <button type="button" class="btn btn-warning">Zamów</button>
-        </div>
-        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-44 ">
-            <button type="button" class="btn btn-warning">Kontakt</button>
-        </div>
+@*         </div> *@
+@*         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 "> *@
+@*             <button type="button" class="btn btn-warning">Zamów</button> *@
+@*         </div> *@
+@*         <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-44 "> *@
+@*             <button type="button" class="btn btn-warning">Kontakt</button> *@
+@*         </div> *@
         
-    </div>
-</div>
+@*     </div> *@
+@* </div> *@
