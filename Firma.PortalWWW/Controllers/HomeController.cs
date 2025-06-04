@@ -21,8 +21,18 @@ namespace Firma.PortalWWW.Controllers
         public IActionResult Index()
         {
             var dania = _context.Danie.ToList();
+            
             var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Naglowek");
             ViewBag.NaglowekIndex = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+
+            var naglowek_menu = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Home_Naglowek_Menu");
+            ViewBag.NaglowekMenu = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+
+            var naglowek_dlaczegomy = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Home_Naglowek_Dlaczegomy");
+            ViewBag.NaglowekDlaczegoMy = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+
+            var opis_dlaczegomy = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Home_Opis_Dlaczegomy");
+            ViewBag.OpisDlaczegoMy = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
 
             return View(dania);
         }
@@ -50,11 +60,19 @@ namespace Firma.PortalWWW.Controllers
         public IActionResult Kontakt()
         {
             var kontakt = _context.WiadomoscKontaktowa.OrderByDescending(z => z.IdWiadomosciKontaktowej).Take(10).ToList();
+
+            var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Wiadomosci");
+            ViewBag.NaglowekWiadomosci = naglowek?.Tresc ?? "Brak nag³ówka w bazie.";
+
             return View(kontakt);
         }
         public IActionResult Pracownicy()
         {
             var pracownicy = _context.Pracownik.ToList();
+
+            var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Pracownicy");
+            ViewBag.NaglowekPracownicy = naglowek?.Tresc ?? "Brak nag³ówka w bazie.";
+
             return View(pracownicy);
         }
 
