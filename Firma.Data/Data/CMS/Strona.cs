@@ -14,7 +14,7 @@ namespace Firma.Data.Data.CMS
         public int IdStrony { get; set; }
 
         [Required(ErrorMessage = "Tytuł odnośnika jest wymagany")]
-        [MaxLength(10, ErrorMessage = "Link może zawierać maksymalnie 10 znaków.")]
+        [MaxLength(25, ErrorMessage = "Link może zawierać maksymalnie 20 znaków.")]
         [Display(Name = "Tytuł Odnośnika")]
         public required string LinkTytul { get; set; }
 

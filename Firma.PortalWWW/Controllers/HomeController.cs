@@ -21,6 +21,9 @@ namespace Firma.PortalWWW.Controllers
         public IActionResult Index()
         {
             var dania = _context.Danie.ToList();
+            var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Naglowek");
+            ViewBag.NaglowekIndex = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+
             return View(dania);
         }
 
@@ -37,6 +40,8 @@ namespace Firma.PortalWWW.Controllers
             .Take(10)
             .ToList();
 
+            var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Zamowienia");
+            ViewBag.NaglowekZamowienia = naglowek?.Tresc ?? "Brak nag³ówka w bazie.";
 
             return View(zamowienia);
 
