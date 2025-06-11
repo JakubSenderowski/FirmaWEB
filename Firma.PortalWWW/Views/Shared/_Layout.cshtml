@@ -25,6 +25,10 @@
         <li class="nav-item">
             <a class="nav-link" asp-controller="Home" asp-action="Pracownicy">Pracownicy 👨‍🍳 / 👩‍🍳</a>
         </li>
+        <li class="nav-item mt-2 ms-4">
+            <button id="toggle-dark" class="btn btn-sm btn-outline-secondary">🌙 Tryb nocny</button>
+        </li>
+
     </ul>
     <div class="container">
         <main role="main" class="pb-3">
@@ -36,6 +40,22 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggleBtn = document.getElementById("toggle-dark");
+            const body = document.body;
+
+            toggleBtn.addEventListener("click", () => {
+                body.classList.toggle("dark-mode");
+                     if (body.classList.contains("dark-mode")) {
+            toggleBtn.innerHTML = "☀️ Jasny motyw";
+        } else {
+            toggleBtn.innerHTML = "🌙 Ciemny motyw";
+        }
+            });
+        });
+    </script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

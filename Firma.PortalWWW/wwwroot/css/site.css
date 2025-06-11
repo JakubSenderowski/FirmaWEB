@@ -23,4 +23,31 @@ html {
 body {
   margin-bottom: 60px;
 }
+.card:hover {
+    transform: scale(1.03);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+    .dark-mode a,
+    .dark-mode .nav-link,
+    .dark-mode .card-title,
+    .dark-mode .card-text {
+        color: #f0f0f0;
+    }
+
+    .dark-mode .card {
+        background-color: #1f1f1f;
+        border-color: #f0f0f0;
+    }
+
+    .dark-mode th,
+    .dark-mode td {
+        color: #f0f0f0;
+    }
 

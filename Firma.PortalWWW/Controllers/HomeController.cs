@@ -21,26 +21,35 @@ namespace Firma.PortalWWW.Controllers
         public IActionResult Index()
         {
             var dania = _context.Danie.ToList();
-            
+
             var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Naglowek");
             ViewBag.NaglowekIndex = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
 
             var naglowek_menu = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Home_Naglowek_Menu");
-            ViewBag.NaglowekMenu = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+            ViewBag.NaglowekMenu = naglowek_menu?.Tresc ?? "Brak nag³ówka w bazie";
 
             var naglowek_dlaczegomy = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Home_Naglowek_Dlaczegomy");
-            ViewBag.NaglowekDlaczegoMy = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+            ViewBag.NaglowekDlaczegoMy = naglowek_dlaczegomy?.Tresc ?? "Brak nag³ówka w bazie";
 
             var opis_dlaczegomy = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Home_Opis_Dlaczegomy");
-            ViewBag.OpisDlaczegoMy = naglowek?.Tresc ?? "Brak nag³ówka w bazie";
+            ViewBag.OpisDlaczegoMy = opis_dlaczegomy?.Tresc ?? "Brak nag³ówka w bazie";
 
             return View(dania);
         }
 
-        public IActionResult Menu()
+
+        public IActionResult Menu(string szukaj)
         {
-            return View();
+            var dania = _context.Danie
+                .Include(d => d.Kategoria)
+                .Where(d => string.IsNullOrEmpty(szukaj) || d.Nazwa.Contains(szukaj))
+                .ToList();
+
+            ViewBag.Search = szukaj;
+
+            return View(dania);
         }
+
         public IActionResult Zamow()
         {
             var zamowienia = _context.Zamowienie
@@ -49,6 +58,9 @@ namespace Firma.PortalWWW.Controllers
             .OrderByDescending(z => z.IdZamowienia)
             .Take(10)
             .ToList();
+
+            var liczbaZamowien = _context.Zamowienie.Count(); 
+            ViewBag.LicznikZamowien = liczbaZamowien;
 
             var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Zamowienia");
             ViewBag.NaglowekZamowienia = naglowek?.Tresc ?? "Brak nag³ówka w bazie.";

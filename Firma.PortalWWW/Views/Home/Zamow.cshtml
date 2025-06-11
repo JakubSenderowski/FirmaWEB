@@ -37,15 +37,25 @@
                         </tbody>
                     </table>
                 </div>
-
-              
-
-                
-           
-
-
         </div>
     </div>
+    <div class="text-center my-5">
+    <h2>Łączna ilość zrealizowanych zamówień:</h2>
+    <span id="licznikZamowien" class="display-4 text-warning" data-count="@ViewBag.LicznikZamowien">0</span>
+</div>
 
 
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.0.7/countUp.umd.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const licznik = document.getElementById("licznikZamowien");
+        const countTo = parseInt(licznik.getAttribute("data-count"));
+        const counter = new countUp.CountUp("licznikZamowien", countTo);
+        if (!counter.error) {
+            counter.start();
+        } else {
+            console.error(counter.error);
+        }
+    });
+</script>
