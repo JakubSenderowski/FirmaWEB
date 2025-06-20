@@ -24,6 +24,8 @@
                             </tr>
                         </thead>
                         <tbody>
+                            <h6>Łączna ilość zrealizowanych zamówień:</h6>
+    <span id="licznikZamowien" class="display-4 text-warning" data-count="@ViewBag.LicznikZamowien">0</span>
                             @foreach (var zamowienie in Model)
                         {
                             <tr>
@@ -40,8 +42,7 @@
         </div>
     </div>
     <div class="text-center my-5">
-    <h2>Łączna ilość zrealizowanych zamówień:</h2>
-    <span id="licznikZamowien" class="display-4 text-warning" data-count="@ViewBag.LicznikZamowien">0</span>
+ 
 </div>
 
 

@@ -1,4 +1,5 @@
 using Firma.Data.Data;
+using Firma.Data.Data.CMS;
 using Firma.Data.Data.Intranet;
 using Firma.Data.Data.Menu;
 using Firma.PortalWWW.Models;
@@ -71,12 +72,27 @@ namespace Firma.PortalWWW.Controllers
         }
         public IActionResult Kontakt()
         {
-            var kontakt = _context.WiadomoscKontaktowa.OrderByDescending(z => z.IdWiadomosciKontaktowej).Take(10).ToList();
-
             var naglowek = _context.Strona.FirstOrDefault(s => s.LinkTytul == "Index_Wiadomosci");
             ViewBag.NaglowekWiadomosci = naglowek?.Tresc ?? "Brak nag³ówka w bazie.";
 
-            return View(kontakt);
+            return View(new WiadomoscKontaktowa { Imie = "", Nazwisko = "", Email = "" }
+);
+
+        }
+
+
+        [HttpPost]
+        public IActionResult Kontakt(WiadomoscKontaktowa wiadomosc)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.WiadomoscKontaktowa.Add(wiadomosc);
+                _context.SaveChanges();
+
+                TempData["Sukces"] = "Wiadomosc zostala wyslana - skontaktujemy sie z Panstwem";
+                return RedirectToAction("Kontakt");
+            }
+            return View(wiadomosc);
         }
         public IActionResult Pracownicy()
         {
