@@ -14,7 +14,6 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// ✅ Dodajemy to zaraz po app = builder.Build()
 QuestPDF.Settings.License = LicenseType.Community;
 
 // Configure the HTTP request pipeline.
