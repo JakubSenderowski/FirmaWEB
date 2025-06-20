@@ -17,6 +17,10 @@
         }
         <div class="col-12 col-lg-6 mb-4 text-center">
             <div class="form-row">
+                <a asp-controller="Home" asp-action="PobierzPdf" class="btn btn-danger mb-3">
+                    Pobierz wiadomości jako PDF
+                </a>
+
                 <form method="post" asp-action="Kontakt">
                     <div class="mb-3">
                         <label asp-for="Imie" class="form-label"></label>

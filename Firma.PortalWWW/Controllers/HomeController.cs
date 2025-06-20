@@ -103,6 +103,15 @@ namespace Firma.PortalWWW.Controllers
 
             return View(pracownicy);
         }
+        public IActionResult PobierzPdf()
+        {
+            var wiadomosci = _context.WiadomoscKontaktowa.ToList();
+
+            var generator = new PdfGeneratorService();
+            var pdfBytes = generator.GenerujWiadomosciPdf(wiadomosci);
+
+            return File(pdfBytes, "application/pdf", "wiadomosci.pdf");
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
